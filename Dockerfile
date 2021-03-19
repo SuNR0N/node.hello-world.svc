@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM node:alpine
 
 ARG DESTINATION_DIR=/usr/app
 
@@ -8,6 +8,6 @@ COPY package.json \
 
 WORKDIR ${DESTINATION_DIR}/
 
-RUN yarn && yarn build
+RUN yarn
 
 CMD yarn start
